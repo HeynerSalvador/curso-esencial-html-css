@@ -1,0 +1,352 @@
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-regular.otf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-italic.otf');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-bold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-bold-italic.otf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+:root {
+    font-size: 17px;
+    --white30: white;
+    --white20: #A5A3A5;
+    --white10: #3A3539;
+    ;
+}
+
+body {
+    /* color: #212121; */
+    color: var(--white30);
+    /* font-family: charter; */
+    font-family: 'Nunito', sans-serif;
+    background: #251F24;
+    margin: 0;
+    /* margin-inline: 100px; */
+    /* margin-block: 100px; */
+    /* margin-block-start: 50px; */
+    /* margin-block-end: 50px; */
+}
+
+a {
+    /* color: #212121; */
+    color: var(--white30);
+}
+
+/* .header {
+    
+} */
+
+.header-content {
+    padding-inline: 20px ;
+}
+
+header {
+    margin-block-start: 20px;
+    /* --gray10: red; */
+    font-size: 14px;
+    /* color: #616161; */
+    color: var(--white);
+    /* top */
+    /* botom */
+    /* inset-block-end: ; */
+    /* left */
+    /* right */
+    /* inset-inline-end: ; */
+}
+
+header li {
+    color: var(--white20);
+    margin-block-end: 16px;
+}
+
+header a {
+    /* color: #616161; */
+    color: var(--white20);
+    text-decoration: none;
+}
+
+header a:hover  {
+    /* color: #212121; */
+    color: var(--white30);
+}
+
+nav details summary {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 50px;
+    /* font-weight: normal; */
+    margin-block-start: 20px;
+    margin-block-end: 16px;
+}
+
+h1 ~ p {
+    margin-bottom: 64px;
+}
+
+/* hr {
+    margin-block: 40px ;
+    border-color: rgba(97, 97, 97, 0.2);
+} */
+
+h2 {
+    font-size: 2em;
+    margin-block: 40px ;
+    /* margin: 64px 0 40px;
+    font-weight: normal; */
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-block: 16px;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+pre {
+    background: var(--white10);
+    padding: 40px;
+    overflow: auto;
+    border-radius: 8px;
+    border: 10px solid red;
+    border-left: 5px solid blue;
+    border-inline-start: 5px solid white;
+    border-block-end: 20px solid pink;
+    border-inline-end: 5px solid green;
+    border-block-start-color: blue ;
+    border: 10px solid #5551FF;
+    box-shadow: -10px 10px 0 0 #AABAFF;
+}
+
+p {
+    color: var(--white20);
+}
+
+blockquote {
+    margin-block-start: 44px;
+    margin-block-end: 44px;
+    background-color: var(--white10);
+    border-radius: 8px;
+    line-height: 32px;
+    font-size: 24px;
+    padding-inline-end: 24px;
+    padding-inline-start: 24px;
+    padding-block-end: 24px;
+    padding-block-start: 24px;
+    /* border-start-start-radius: 60px; */
+}
+
+blockquote p {
+    color: var(--white30);
+}
+
+.hero {
+    background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+    block-size: 50px;
+}
+
+.section-content {
+    margin-top: 64px;
+}
+
+.section-content:first-of-type {
+    /* background: red; */
+    margin: 0;
+}
+
+.section-content ul li {
+    line-height: 24px;
+}
+
+.section-content ul li {
+    margin-bottom: 16px;
+}
+
+.section-content ~ hr{
+    display: none;
+}
+
+.section-content img {
+    margin-block-start: 40px;
+    display: block;
+    max-inline-size: 100%;
+    /* max-width: 100%; */
+}
+
+.section-content {
+    counter-reset: titlelist;
+}
+
+.section-content h3 {
+    counter-increment: titlelist;
+}
+
+.section-content h3::before {
+    content: counter(titlelist, decimal)'. ';
+}
+
+.main hr {
+    display: none;
+}
+
+.wrapper {
+    /* border: 1px solid yellow; */
+    max-inline-size: 842px;
+    /* block-size: 100px; */
+    /* margin-left: 500px; */
+    margin: auto;
+}
+
+.main-content {
+    /* border: 1px solid blue; */
+    padding-inline: 16px;
+}
+
+/* .slider {
+    border: 1px solid red;
+} */
+
+.slider-container {
+    /* block-size: 100px; */
+    display: block;
+    overflow: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    font-size: 0;
+    /* border: 1px solid purple; */
+}
+
+.slider-bullet-list {
+    text-align: center;
+    margin-block-start: 10px;
+}
+
+.slider-bullet {
+    display: inline-block;
+    inline-size: 15px;
+    block-size: 15px;
+    background: white;
+    border-radius: 50%;
+}
+
+.video {
+    margin: 0;
+    /* border: 1px solid blue; */
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+.form input {
+    width: 100%;
+    border: 1px solid var(--white30);
+    background: #251F24;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding-inline: 16px;
+    padding-block: 12px;
+    color: var(--white30);
+    font-size: 16px;
+    display: block;
+    margin-block-end: 24px;
+}
+
+.form input[type="Submit"] {
+    background: #157EFB;
+    border: none;
+    margin-block-end: 80px;
+}
+
+.form input::-webkit-input-placeholder {
+    color: var(--white20);
+}
+
+/* footer */
+.footer-content {
+    padding-block-start: 40px;
+    padding-block-end: 58px;
+    background-color: #fff;
+    /* block-size: 180px; */
+}
+
+.footer-content img {
+    inline-size: 24px;
+    block-size: 24px;
+}
+  
+.footer-content p {
+    text-align: center;
+    font-size: 24px;
+    line-height: 28.13px;
+    margin-block-start: 0;
+    margin-block-end: 16px;
+    color: #251F24;
+    font-weight: 600;
+}
+
+.footer-content .social-links {
+    max-inline-size: 120px;
+    block-size: 24px;
+    display: block;
+    margin: auto;
+    font-size: 0; 
+}
+
+.footer-content .social-links img {
+    margin-inline: 8px;
+}
+
+/* media queries */
+@media screen and (min-width: 980px) {
+    .hero {
+        block-size: 300px;
+    }
+    
+    .header {
+        position: sticky;
+        inset-block-start: -45px;
+    }
+    
+    .header-content {
+        position: relative;
+        inset-block-start: 65px;
+        padding-inline: 0;
+    }
+    
+    header {
+        position: absolute;
+        inset-block-start: 0;  
+        inset-inline-start: -198px;
+        inline-size: 198px;
+    }
+
+    h1 {
+        font-size: 50px;
+        margin-block-start: 64px;
+    }
+
+}
+
+  
